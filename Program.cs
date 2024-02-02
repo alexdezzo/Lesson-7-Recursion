@@ -28,9 +28,13 @@ int A(int n, int m) // метод работы функции Аккермана
 {
 
     if (n == 0)
+    {
         return m + 1;
+    }
     if (m == 0)
+    {
         return A(n - 1, 1);
+    }
     return A(n - 1, A(n, m - 1));
 }
 
@@ -88,6 +92,6 @@ string ReverseArray(int[] array, int index)     // метод разворота
 }
 
 Console.Clear();
-int [] array = CreateArray();       // Вызов метода создания массива
+int[] array = CreateArray();       // Вызов метода создания массива
 
 Console.WriteLine($"Ваш массив [{PrintArray(array)}] => {ReverseArray(array, array.Length - 1)}");
